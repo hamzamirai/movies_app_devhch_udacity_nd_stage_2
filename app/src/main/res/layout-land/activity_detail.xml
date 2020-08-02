@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/detail_back"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_width="@dimen/card_view_image_detail_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:cardElevation="@dimen/card_view_elevation"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="@dimen/card_movies_radius"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/thumbnail_image_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/movie_title"
+                        android:text="@string/name_movie"
+                        android:layout_weight="1"
+                        style="@style/TextViewDetailStyle"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        />
+
+                    <com.github.ivbaranov.mfb.MaterialFavoriteButton
+                        android:id="@+id/favorite_button"
+                        android:layout_width="@dimen/favorite_button_width_height"
+                        android:layout_height="@dimen/favorite_button_width_height"
+                        app:mfb_type="heart"
+                        app:mfb_color="white"
+                        android:layout_marginStart="@dimen/layout_margin_left" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/plot_synopsis"
+                    android:text="@string/plotsynopsis"
+                    style="@style/TextViewDetailStyle"
+                    />
+
+                <TextView
+                    android:id="@+id/user_rating"
+                    android:text="@string/rating"
+                    style="@style/TextViewDetailStyle" />
+
+                <TextView
+                    android:id="@+id/release_date"
+                    android:text="@string/release"
+                   style="@style/TextViewDetailStyle"/>
+
+                <TextView
+                    android:id="@+id/text_view_trailer"
+                    android:text="@string/trailer"
+                    android:textColor="@color/white"
+                    style="@style/TextViewDetailStyle"/>
+
+                <RelativeLayout
+                    android:padding="@dimen/layout_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginStart="@dimen/layout_margin_left"
+                        android:id="@+id/recycler_view_trailer"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scrollbars="horizontal" />
+
+                    <TextView
+                        android:id="@+id/empty_view_trailer"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/no_trailers"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        style="@style/TextViewDetailStyle"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_view_review"
+                    android:textColor="@color/white"
+                    android:text="@string/review"
+                    style="@style/TextViewDetailStyle" />
+
+                <RelativeLayout
+                    android:padding="@dimen/layout_padding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_review"
+                        android:layout_marginStart="@dimen/layout_margin_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scrollbars="horizontal" />
+
+                    <TextView
+                        android:id="@+id/empty_view_review"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/no_reviews"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        style="@style/TextViewDetailStyle"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

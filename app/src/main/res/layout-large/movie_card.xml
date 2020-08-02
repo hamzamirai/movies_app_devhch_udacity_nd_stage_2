@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_layout_item"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/card_view_elevation"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/card_movies_radius">
+
+                <com.flaviofaria.kenburnsview.KenBurnsView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/movie_cover_height"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/splash"
+                    android:scaleType="centerCrop"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/title"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="@dimen/movie_title_padding"
+                android:text="title"
+                android:fontFamily="@font/red_rose"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/movie_title" />
+
+            <TextView
+                android:id="@+id/user_rating"
+                android:fontFamily="@font/red_rose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="user rating"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/user_rating" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

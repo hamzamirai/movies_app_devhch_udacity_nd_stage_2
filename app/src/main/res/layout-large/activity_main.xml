@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-10dp"
+            android:fontFamily="@font/red_rose"
+            android:paddingLeft="@dimen/layout_padding"
+            android:paddingTop="@dimen/mini_padding"
+            android:text="@string/welcome"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_welcome"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/tv_see_today"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_welcome"
+            android:fontFamily="@font/red_rose"
+            android:paddingLeft="@dimen/layout_padding"
+            android:paddingBottom="@dimen/mini_padding"
+            android:text="@string/what_would_you_like_to_see_toady"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_see_today"
+            android:textStyle="bold|italic" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_see_today"
+            tools:context=".MainActivity">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:showIn="@layout/activity_main">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_movies"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical" />
+
+            </RelativeLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/no_internet_connection"
+            android:text="@string/no_internet_connection"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold|italic"
+            style="@style/TextViewDetailStyle"/>
+
+
+        <TextView
+            android:id="@+id/empty_view_favorite"
+            android:layout_centerInParent="true"
+            android:text="@string/empty_favorite"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:visibility="gone"
+            style="@style/TextViewDetailStyle"/>
+
+    </RelativeLayout>
+</layout>

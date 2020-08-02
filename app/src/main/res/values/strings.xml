@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Movies App</string>
+    <string name="action_settings">Settings</string>
+    <string name="name_movie">Movie Title :</string>
+    <string name="movie_details">Movie Details</string>
+    <string name="rating">User Rating :</string>
+    <string name="release">Release day :</string>
+    <string name="pref_sort_order_label">Sort Order</string>
+    <string name="pref_sort_order_key">sortOrder</string>
+    <string name="pref_most_popular">Most Popular</string>
+    <string name="pref_top_rated">Top Rated</string>
+    <string name="plotsynopsis">Plot Synopsis :</string>
+
+    <string name="pref_summary">Choose an order to sort.</string>
+    <string name="pref_sort_by_title">Sort By:</string>
+
+    <string name="title_activity_settings">Settings</string>
+    <string name="no_internet_connection">No internet connection.</string>
+
+    <string name="trailer">Trailer</string>
+    <string name="favorite" translatable="false">Favorite Movies</string>
+    <string name="review">Review</string>
+    <string name="empty_favorite">Empty favorite.\n Add movies that you like to favorite for use the app when you are not connected to the internet …</string>
+    <string name="please_get_your_api_key">Please get your API Key</string>
+    <string name="make_sure_that_you_are_connected">
+        \nMake sure that you are connected to the Internet and click here again.</string>
+    <string name="movies_refreshed">Movies Refreshed</string>
+    <string name="fetching_movies">Fetching movies…</string>
+    <string name="please_obtain_api_key_from">Please obtain API Key firstly from themoviedb.org</string>
+    <string name="error_fetching_data">Error Fetching Data!</string>
+    <string name="added_to_favorite">Added to Favorite</string>
+    <string name="removed_from_favorite">Removed from Favorite</string>
+    <string name="welcome">Welcome!</string>
+    <string name="what_would_you_like_to_see_toady">What would you like\nto see toady?</string>
+    <string name="no_trailers">No trailers</string>
+    <string name="no_reviews">NO reviews</string>
+    <string name="dialog_delete_title">Attention!</string>
+    <string name="dialog_delete_message">Delete All Movies from Favorite?</string>
+    <string name="dialog_delete_positive_button">Delete</string>
+    <string name="dialog_delete_negative_button">Cancel</string>
+
+
+</resources>
